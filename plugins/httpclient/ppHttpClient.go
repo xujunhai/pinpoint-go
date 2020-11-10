@@ -160,12 +160,6 @@ func NewRequest(ctx interface{}, method, url string, body io.Reader) (*http.Requ
 	}
 
 	cx, _ := ctx.(*context.Context)
-
-	//echoCtx, _ := ctx.(echo.Context)
-	//if cx == nil && echoCtx != nil {
-	//	cx, _ = echoCtx.Get(agent.PP_CTX).(*agent.TraceContext)
-	//}
-
 	if cx == nil {
 		return request, nil
 	}
